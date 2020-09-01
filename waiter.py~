@@ -1,0 +1,29 @@
+#!/usr/bin/python 
+
+import wx
+
+class MainFrame(wx.Frame):
+	def __init__(self):
+#Start the frame
+wx.Frame.__init__(self,None,wx.ID_ANY,title='hello world')
+#Declare Sizers
+	self.hbox = wx.BoxSizer()
+	self.vbox= wx.BoxSizer(wx.VERTICAL)
+#TextCtrl
+	self.text = wx.TextCtrl(self)
+	self.retext = wx.TextCtrl(self,style = wx.TE_READONLY|wx.TE_MULTILINE)
+#Button
+	self.buthello = wx.Button(self,wx.ID_ANY,label = 'Transfer')
+#Setting up the sizers
+	self.hbox.Add(self.text,proportion = 1,border=0)
+	self.hbox.Add(self.buthello,proportion =0,border=0)
+	self.vbox.Add(self.hbox,proportion = 0,border=0,flag = wx.EXPAND)
+	self.vbox.Add(self.retext,proportion=1,border=0,flag = wx.EXPAND)
+	self.SetSizer(self.vbox)
+	self.Show()
+
+
+app = wx.App(redirect=False)
+frame = MainFrame()
+app.MainLoop()
+ 

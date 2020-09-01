@@ -1,0 +1,1 @@
+What is an MYD file? Database file created with MySQL, a popular open source database management system; contains the actual data stored within the rows of the database. MYD files are saved with a corresponding .FRM file that contains the table format data, and an .MYI file, which serves as the database index.
